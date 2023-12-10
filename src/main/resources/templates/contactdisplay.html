@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!--
+    <h1 data-th-text="Hello, ${loginid}"></h1>
+-->
+    <div>
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Phone Number</th>
+                    <th>DOB</th>
+                    <th>ID</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr data-th-object="${contactdisplay}">
+                    <td data-th-text="*{name}"></td>
+                    <td data-th-text="*{email}"></td>
+                    <td data-th-text="*{phoneNo}"></td>
+                    <td data-th-text="*{dob}"></td>
+                    <td data-th-text="*{id}"></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

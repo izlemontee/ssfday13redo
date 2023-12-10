@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <h1>Enter contact info</h1>
+    </div>
+    <form method="POST" data-th-action="@{/form/contact}" data-th-object="${contact}">
+        <div>
+            <input type="text" name="name" data-th-field="*{name}">
+        </div>
+        <div data-th-if="${#fields.hasErrors('name')}" data-th-errors="*{name}"></div>
+        <div>
+            <input type="text" name="email" data-th-field="*{email}">
+        </div>
+        <div data-th-if="${#fields.hasErrors('email')}" data-th-errors="*{email}"></div>
+        <div>
+            <input type="text" name="phoneNo" data-th-field="*{phoneNo}">
+        </div>
+        <div data-th-if="${#fields.hasErrors('phoneNo')}" data-th-errors="*{phoneNo}"></div>
+        <div>
+            <input type="date" name="dob" data-th-field="*{dob}">
+        </div> 
+        <div data-th-if="${#fields.hasErrors('dob')}" data-th-errors="*{dob}"></div>
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>

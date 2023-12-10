@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form method="POST" data-th-action="@{/form/login}">
+        <div>
+            <p>Enter contact id to log in</p>
+        </div>
+        <input type="text" name="loginid" data-th-text="${loginid}">
+        <button type="submit">Login</button>
+    </form>
+</body>
+</html>
